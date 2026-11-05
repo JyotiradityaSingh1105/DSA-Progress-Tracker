@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DSA Tracker</div>
+        <div>
+            <span id="userName"></span>
+            <button id="logoutBtn" class="small-btn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="authSection">
+            <div class="auth-card">
+                <h1>DSA Progress Tracker</h1>
+                <p class="muted">Create an account and track your DSA journey.</p>
+
+                <div class="tabs">
+                    <button id="loginTab" class="active">Login</button>
+                    <button id="registerTab">Register</button>
+                </div>
+
+                <form id="authForm">
+                    <input id="name" type="text" placeholder="Your name" class="register-only hidden">
+                    <input id="email" type="email" placeholder="Email" required>
+                    <input id="password" type="password" placeholder="Password" required minlength="6">
+                    <button type="submit" class="primary-btn" id="authButton">Login</button>
+                </form>
+
+                <p id="authMessage" class="message"></p>
+            </div>
+        </section>
+
+        <section id="dashboard" class="hidden">
+            <div class="hero">
+                <h1>Your DSA Journey 🚀</h1>
+                <p>Complete topics and build strong DSA fundamentals.</p>
+            </div>
+
+            <div class="progress-card">
+                <div class="progress-header">
+                    <h2>Overall Progress</h2>
+                    <strong id="progressText">0%</strong>
+                </div>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+                <p id="completedText">0 of 14 topics completed</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <h3 id="totalTopics">14</h3>
+                    <p>Total Topics</p>
+                </div>
+                <div class="stat">
+                    <h3 id="completedTopics">0</h3>
+                    <p>Completed</p>
+                </div>
+                <div class="stat">
+                    <h3 id="remainingTopics">14</h3>
+                    <p>Remaining</p>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h2>DSA Topics</h2>
+                <button id="resetBtn" class="danger-btn">Reset Progress</button>
+            </div>
+
+            <div id="topicsContainer" class="topics"></div>
+            <p id="dashboardMessage" class="message"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
